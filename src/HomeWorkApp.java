@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class HomeWorkApp {
@@ -15,8 +15,7 @@ public class HomeWorkApp {
         System.out.println("Я посчитаю для Вас сумму двух чисел. Введите первое число");
         Scanner scanner = new Scanner(System.in);
         // я знаю,как использовать сканер для запроса переменных,
-        // но хотела бы понять,
-        // что делается под капотом,когда я его использую
+        // но хотела бы понять, что делается под капотом,когда я его использую
         int a = scanner.nextInt();
         System.out.println("Введите второе число");
         int b = scanner.nextInt();
