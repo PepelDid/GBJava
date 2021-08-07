@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class HW5_Arrays5 {
+public class HW4_Arrays5 {
     public static int SIZE = 5;
     public static int DOTS_TO_WIN = 3;
     public static final char DOT_EMPTY = '•';
