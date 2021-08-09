@@ -69,19 +69,19 @@ public class HW4_Arrays3 {
             }
         }
 // проверяет по диагонали из угла 1 1
-        for (i = 0, j = 0; i < SIZE; i++, j++) {
-            if (map[i][j] == symb) {
+        for (i = 0; i < SIZE; i++) {
+            if (map[i][i] == symb) {
                 q++;
             }
         }
-        if (q < j) {
+        if (q < i) {
             q = 0;
         } else if (q == SIZE) {
             return true;
         }
 //проверяет по диагонали из угла 1 3
-        for (i = 0, j = SIZE - 1; i < SIZE; i++, j--) {
-            if (map[i][j] == symb) {
+        for (i = 0; i < SIZE; i++) {
+            if (map[i][map[i].length - 1 - i] == symb) {
                 q++;
             }
         }
