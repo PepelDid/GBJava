@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class HW4_Arrays5 {
     public static int SIZE = 5;
-    public static int DOTS_TO_WIN = 3;
+    public static int DOTS_TO_WIN = 4;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
@@ -47,12 +47,12 @@ public class HW4_Arrays5 {
             for (j = 0; j < SIZE; j++) {
                 if (map[i][j] == symb) {
                     q++;
+                } else {
+                    q = 0;
                 }
-            }
-            if (q < j -1) {
-                q = 0;
-            } else if (q >= SIZE - 1) {
-                return true;
+                if (q == DOTS_TO_WIN) {
+                    return true;
+                }
             }
         }
 // проверяет по вертикали
@@ -60,35 +60,36 @@ public class HW4_Arrays5 {
             for (i = 0; i < SIZE; i++) {
                 if (map[i][j] == symb) {
                     q++;
+                } else {
+                    q = 0;
                 }
-            }
-            if (q < i - 1) {
-                q = 0;
-            } else if (q >= SIZE - 1) {
-                return true;
+                if (q == DOTS_TO_WIN) {
+                    return true;
+                }
             }
         }
 // проверяет по диагонали из угла 1 1
-        for (i = 0, j = 0; i < SIZE; i++, j++) {
-            if (map[i][j] == symb) {
+        for (i = 0; i < DOTS_TO_WIN; i++) {
+            if (map[i][i] == symb) {
                 q++;
+            } else {
+                q = 0;
+            }
+            if (q == DOTS_TO_WIN) {
+                return true;
             }
         }
-        if (q < j - 1) {
-            q = 0;
-        } else if (q >= SIZE - 1) {
-            return true;
-        }
+
 //проверяет по диагонали из угла 1 3
-        for (i = 0, j = SIZE - 1; i < SIZE; i++, j--) {
-            if (map[i][j] == symb) {
+        for (i = 0; i < DOTS_TO_WIN; i++) {
+            if (map[i][map[i].length - 1 - i] == symb) {
                 q++;
+            } else {
+                q = 0;
             }
-        }
-        if (q < j - 1) {
-            q = 0;
-        } else if (q >= SIZE - 1) {
-            return true;
+            if (q == DOTS_TO_WIN) {
+                return true;
+            }
         }
 
         return false;
