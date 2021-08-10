@@ -47,12 +47,12 @@ public class HW4_Arrays3 {
             for (j = 0; j < SIZE; j++) {
                 if (map[i][j] == symb) {
                     q++;
+                } else {
+                    q = 0;
                 }
-            }
-            if (q < j) {
-                q = 0;
-            } else if (q == SIZE) {
-                return true;
+                if (q == SIZE) {
+                    return true;
+                }
             }
         }
 // проверяет по вертикали
@@ -60,35 +60,36 @@ public class HW4_Arrays3 {
             for (i = 0; i < SIZE; i++) {
                 if (map[i][j] == symb) {
                     q++;
+                } else {
+                    q = 0;
                 }
-            }
-            if (q < i) {
-                q = 0;
-            } else if (q == SIZE) {
-                return true;
+                if (q == SIZE) {
+                    return true;
+                }
             }
         }
 // проверяет по диагонали из угла 1 1
         for (i = 0; i < SIZE; i++) {
             if (map[i][i] == symb) {
                 q++;
+            } else {
+                    q = 0;
+        }
+            if (q == SIZE) {
+                return true;
             }
         }
-        if (q < i) {
-            q = 0;
-        } else if (q == SIZE) {
-            return true;
-        }
+
 //проверяет по диагонали из угла 1 3
         for (i = 0; i < SIZE; i++) {
             if (map[i][map[i].length - 1 - i] == symb) {
                 q++;
+            } else {
+                q = 0;
             }
-        }
-        if (q < j) {
-            q = 0;
-        } else if (q == SIZE) {
-            return true;
+            if (q == SIZE) {
+                return true;
+            }
         }
 
         return false;
