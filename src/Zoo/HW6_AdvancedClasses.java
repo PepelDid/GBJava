@@ -6,16 +6,21 @@ public class HW6_AdvancedClasses {
         Animal cat2 = new Cat("Felix", 7, "male");
         Animal dog1 = new Dog("King", 9, "Malamute");
         Animal dog2 = new Dog("Hugo", 3, "Bulldog");
+        Animal dog3 = new Dog ("Baf", 10, "Terrier");
 
-
+        Animal.howMuchAnimals();
         dog1.run(100);
         dog2.run(600);
+        dog3.run(150);
         dog1.swim(50);
-        dog2.swim(5);
+        dog2.swim(7);
+        dog3.swim(5);
         cat1.run(20);
         cat2.run(300);
         cat1.swim(50);
         cat2.swim(3);
+
+
 
     }
 }

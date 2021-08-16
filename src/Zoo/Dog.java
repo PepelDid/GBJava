@@ -1,11 +1,13 @@
 package Zoo;
 
-
 public class Dog extends Animal {
     String breed;
+    static int dogCount = 0;
+
     public Dog(String name, int age, String breed){
         super(name, age);
         this.breed = breed;
+        dogCount++;
     }
     void run (int dist) {
         if (dist > 500) {

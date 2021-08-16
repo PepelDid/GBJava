@@ -1,11 +1,13 @@
 package Zoo;
 
-
 public class Cat extends Animal {
     String sex;
+    static int catCount = 0;
+
     public Cat(String name, int age, String sex){
         super(name, age);
         this.sex = sex;
+        catCount++;
     }
 
     void swim (int dist){
@@ -19,5 +21,6 @@ public class Cat extends Animal {
             System.out.println(name + " run " + dist + " m.");
         }
         }
+
 
 }
